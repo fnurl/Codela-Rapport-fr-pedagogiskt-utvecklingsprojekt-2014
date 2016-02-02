@@ -3,5 +3,5 @@ introduktion.md
 syfte.md
 utveckling.md
 anvandning.md
-Resultat_erfarenheter_och_insikter_hur__.md
+resultat.md
 Diskussion_fortsatt_framtida_anv_ndning__.md
