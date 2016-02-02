@@ -1,1 +1,1 @@
-# Resultat
+# Resultat: erfarenheter och insikter
