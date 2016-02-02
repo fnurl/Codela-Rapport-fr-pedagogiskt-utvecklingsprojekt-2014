@@ -1,6 +1,6 @@
 Sammanfattning_av_projektet__.md
 untitled.md
-Syfte__.md
+Projektets_syfte_unders_ka_m__.md
 Metod__.md
 Resultat__.md
 Diskussion__.md
