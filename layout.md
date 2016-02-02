@@ -1,6 +1,6 @@
 Sammanfattning_av_projektet__.md
 untitled.md
 Projektets_syfte_unders_ka_m__.md
-Metod__.md
+Utveckling_av_systemet_kort_om__.md
 Resultat__.md
 Diskussion__.md
