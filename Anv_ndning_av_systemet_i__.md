@@ -1,1 +1,1 @@
-# Användning av systemet i kurser
+# Metod: Användning av systemet i kurser
