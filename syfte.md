@@ -16,4 +16,4 @@ Syftet med detta projekt har varit följande:
 1. att *tillhandahålla en platform som gör det möjligt för studenterna att genomföra programmeringsövningar* på medhavd dator eller surfplatta utan några större förberedelser
 2. att undersöka och få erfarenhet av *vilka förändringar i kursdesign, kursmomentsplanering och resursanvändning* som behövs eller krävs på grund av införandet av denna nya lärande aktivitet
 
-Ett sätt att rama in detta projekt är således att se det som en ansats att tillföra *Blended Learning* \citep{sharma_blended_2010} till programmeringsundervisning. Ett annat sätt att rama in projektet är att se det som en ansats till att skapa och tillhandahålla en miljö som möjliggör aktivt lärande på en programmeringsföreläsning.
+Ett sätt att rama in detta projekt är således att se det som en ansats att tillföra *Blended Learning*  \cite{sharma_blended_2010} till programmeringsundervisning. Ett annat sätt att rama in projektet är att se det som en ansats till att skapa och tillhandahålla en miljö som möjliggör aktivt lärande på en programmeringsföreläsning.
