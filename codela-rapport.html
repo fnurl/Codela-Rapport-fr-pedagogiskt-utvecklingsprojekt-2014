@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.0.0-rc4" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="author" content="Jody Foo, Anders Fröberg, Erik Berglund, Jalal Maleki  
+                    Camilla Kirkegaard, Sahand Sajadee" />
+  <title>Studentaktiva programmeringsföreläsningar</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote { 
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013"; 
+      position: absolute;
+      margin-left: -1em; 
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {  
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;  
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 { 
+    margin-top: 1.22em; 
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  { 
+    margin-top: 1ex;    
+  }
+  .madoko h5, .madoko h6 { 
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 { 
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 { 
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt, 
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;    
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+
+<div class="titleblock align-center para-block" data-line="15" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" data-line="15" style="text-align:center;line-adjust:0">
+<div class="title para-block" data-line="15" style="font-size:xx-large;font-weight:bold;margin-bottom:0.5ex;line-adjust:0"><span data-line="15"></span>Studentaktiva programmeringsföreläsningar</div>
+<div class="subtitle para-block" data-line="18" style="font-size:x-large;margin-bottom:0.5ex;line-adjust:0"><span data-line="18"></span>Rapport från pedagogiskt utvecklingsprojekt 2014.</div></div>
+<div class="authors align-center" data-line="23" style="text-align:center;width:80%;line-adjust:0"><table class="authorrow columns block" data-line="23" style="margin-top:2ex;width:100%;line-adjust:0">
+<tbody><tr><td class="author column" data-line="23" style="text-align:center;line-adjust:0">
+<div class="authorname" data-line="23" style="font-size:large;line-adjust:0"><span data-line="23"></span>Jody Foo, Anders Fröberg, Erik Berglund, Jalal Maleki<br>
+                  Camilla Kirkegaard, Sahand Sajadee</div>
+<div class="authoraddress" data-line="26" style="line-adjust:0"><span data-line="26"></span>Linköping University</div>
+<div class="authoremail email" data-line="29" style="line-adjust:0"><span data-line="29"></span>{förnamn.efternamn}@liu.se</div></td></tr></tbody></table></div></div>
+<div class="abstract" data-line="17" style="margin-left:3em;margin-right:3em;font-size:small">
+<p class="p noindent" data-line="18"><span data-line="18"></span><strong class="strong-star2">Abstract.</strong><span data-line="18"></span> 
+<span data-line="19"></span><!-- # Sammanfattning av projektet --><span data-line="19"></span>
+</p>
+<ul class="ul list-dash compact" data-line="21">
+<li class="li ul-li list-dash-li compact-li" data-line="21"><span data-line="21"></span>Mål: Att tillhandahålla en möjlighet för studenter att prova och experimentera med programmering under föreläsning
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="22"><span data-line="22"></span>Utveckling av Codela
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="23"><span data-line="23"></span>Olika sätt vi använt Codela på
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="24"><span data-line="24"></span>Fortsatt användning av Codela
+</li></ul></div><h2 id="sec-introduktion--frelsningar-i-programmering" class="h1" data-line="29" data-heading-depth="1" style="display:block"><span data-line="29"></span><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span><span data-line="29"></span>Introduktion: Föreläsningar i programmering</h2>
+<ul class="ul list-dash compact" data-line="31">
+<li class="li ul-li list-dash-li compact-li" data-line="31"><span data-line="31"></span>Programmeringskurs: föreläsningar<span data-line="31"></span> <span data-line="31"></span>+ labbar<span data-line="31"></span> <span data-line="31"></span>+ eventuella lektioner
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="32"><span data-line="32"></span>Problem: tid som går mellan föreläsningar och att få prova på
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="33"><span data-line="33"></span>Introduktionskurser i programmering: lära sig syntax och att <span data-line="33"></span>&#8220;tänka som en dator&#8221;<span data-line="33"></span>. Notational Machine <span data-line="33"></span>\<span data-line="33"></span>cite{boulay<span data-line="33"></span>_<span data-line="33"></span>difficulties<span data-line="33"></span>_<span data-line="33"></span>1986}
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="34"><span data-line="34"></span>Projekdelgatare
+</li></ul>
+
+<hr  class="madoko" data-line="36" style="display:block">
+
+<p class="p noindent" data-line="38"><span data-line="38"></span>Många programmeringskurser som ges på Institutionen för datavetenskap vid Linköpings universitet har följande moment: föreläsning, lektion och programmeringslaboration (i fortsättningen kallad för <span data-line="38"></span><em class="em-star1">programmeringslabb</em><span data-line="38"></span>, eller <span data-line="38"></span><em class="em-star1">labb</em><span data-line="38"></span>). 
+</p><h3 id="sec-projektdeltagare" class="h2" data-line="40" data-heading-depth="2" style="display:block"><span data-line="40"></span><span class="heading-before"><span class="heading-label">1.1</span>.&#8194;</span><span data-line="40"></span>Projektdeltagare</h3>
+<p class="p noindent" data-line="42"><span data-line="42"></span>Pedagogiska medel för detta projekt söktes av följande personer vid institutionen för datavetenskap: Jody Foo (huvudsökande), Anders Fröberg, Erik Berglund, Camilla Kirkegaard, Jalal Maleki.
+</p><h2 id="sec-projektets-syfte" class="h1" data-line="44" data-heading-depth="1" style="display:block"><span data-line="44"></span><span class="heading-before"><span class="heading-label">2</span>.&#8194;</span><span data-line="44"></span>Projektets syfte</h2>
+<p class="p noindent" data-line="46"><span data-line="46"></span>Målet med detta pedagogiska utvecklingsprojekt har varit att introducera en ny typ av lärmoment som integrerar studentaktiva inslag från datorlaborationer med lärardrivna inslag från traditionella föreläsningar. Som vi presenterat tidigare i denna rapport (se<span data-line="46"></span> [#introduktion]<span data-line="46"></span>), så har ett förekommande problem med ett traditionellt upplägg av en programmeringskurs varit det tidsmässiga avståndet mellan laborationer och föreläsningar.
+</p>
+<p class="p indent" data-line="48"><span data-line="48"></span>Undervisning i ämnen som inte kräver speciell utrustning för att utföra vissa moment har haft möjligheten att kombinera olika lärandemoment i större grad än t.ex. programmeringsundervisning där en dator med en specialiserad programmeringsmiljö ofta behövts.
+</p>
+<p class="p indent" data-line="50"><span data-line="50"></span>Syftet med detta projekt har varit följande:
+</p>
+<ol class="ol compact" data-line="52">
+<li class="li ol-li compact-li" data-line="52"><span data-line="52"></span>att <span data-line="52"></span><em class="em-star1">tillhandahålla en platform som gör det möjligt för studenterna att genomföra programmeringsövningar</em><span data-line="52"></span> på medhavd dator eller surfplatta utan några större förberedelser
+</li>
+<li class="li ol-li compact-li" data-line="53"><span data-line="53"></span>att undersöka och få erfarenhet av <span data-line="53"></span><em class="em-star1">vilka förändringar i kursdesign, kursmomentsplanering och resursanvändning</em><span data-line="53"></span> som behövs eller krävs på grund av införandet av denna nya lärande aktivitet
+</li></ol>
+
+<p class="p noindent" data-line="55"><span data-line="55"></span>Ett sätt att rama in detta projekt är således att se det som en ansats att tillföra <span data-line="55"></span><em class="em-star1">Blended Learning</em><span data-line="55"></span>  <span data-line="55"></span>\<span data-line="55"></span>cite{sharma<span data-line="55"></span>_<span data-line="55"></span>blended<span data-line="55"></span>_<span data-line="55"></span>2010} till programmeringsundervisning. Ett annat sätt att rama in projektet är att se det som en ansats till att skapa och tillhandahålla en miljö som möjliggör aktivt lärande på en programmeringsföreläsning.
+</p>
+<hr  class="madoko" data-line="57" style="display:block">
+
+<ul class="ul list-dash compact" data-line="59">
+<li class="li ul-li list-dash-li compact-li" data-line="59"><span data-line="59"></span>undersöka möjligheter och konsekvenser av att
+
+<ul class="ul list-dash compact" data-line="60">
+<li class="li ul-li list-dash-li compact-li" data-line="60"><span data-line="60"></span>tillhandahålla system till studenterna
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="61"><span data-line="61"></span>planera användning av system som lärare
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="62"><span data-line="62"></span>använda system som komplement eller ersättning för existerande moment
+</li></ul></li></ul>
+<h2 id="sec-metod--utveckling-av-systemet" class="h1" data-line="64" data-heading-depth="1" style="display:block"><span data-line="64"></span><span class="heading-before"><span class="heading-label">3</span>.&#8194;</span><span data-line="64"></span>Metod: Utveckling av systemet</h2>
+<ul class="ul list-dash compact" data-line="66">
+<li class="li ul-li list-dash-li compact-li" data-line="66"><span data-line="66"></span>kort om hur utvecklingsprocessen såg ut, resurser som använders m.m.
+</li></ul>
+<h2 id="sec-metod--anvndning-av-systemet-i-kurser" class="h1" data-line="68" data-heading-depth="1" style="display:block"><span data-line="68"></span><span class="heading-before"><span class="heading-label">4</span>.&#8194;</span><span data-line="68"></span>Metod: Användning av systemet i kurser</h2>
+<ul class="ul list-dash compact" data-line="70">
+<li class="li ul-li list-dash-li compact-li" data-line="70"><span data-line="70"></span>beskrivning av olika kurser/studentgrupper vi provat det på
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="71"><span data-line="71"></span>beskrivning av olika sätt som vi använt Codela på
+</li></ul>
+<h3 id="sec-anvndning-i-kursen-729g04-programmering-och-diskret-matematik" class="h2" data-line="73" data-heading-depth="2" style="display:block"><span data-line="73"></span><span class="heading-before"><span class="heading-label">4.1</span>.&#8194;</span><span data-line="73"></span>Användning i kursen 729G04 Programmering och diskret matematik</h3>
+<p class="p noindent" data-line="75"><span data-line="75"></span>Kursen 729G04 är en av de första kurserna som studenterna på kandidatprogrammet för Kognitionsvetenskap läser under deras första termin. Det är även den första obligatoriska programmeringskursen av två på programmet. Studenterna är en relativt heterogen grupp med en bakgrund 
+</p><h3 id="sec-anvndning-i-kursen-729g26-interaktionsprogrammering" class="h2" data-line="77" data-heading-depth="2" style="display:block"><span data-line="77"></span><span class="heading-before"><span class="heading-label">4.2</span>.&#8194;</span><span data-line="77"></span>Användning i kursen 729G26 Interaktionsprogrammering</h3><h3 id="sec-anvndning-i-kursen-" class="h2" data-line="79" data-heading-depth="2" style="display:block"><span data-line="79"></span><span class="heading-before"><span class="heading-label">4.3</span>.&#8194;</span><span data-line="79"></span>Användning i kursen <span data-line="79"></span>&#8230;</h3><h2 id="sec-resultat--erfarenheter-och-insikter" class="h1" data-line="81" data-heading-depth="1" style="display:block"><span data-line="81"></span><span class="heading-before"><span class="heading-label">5</span>.&#8194;</span><span data-line="81"></span>Resultat: erfarenheter och insikter</h2>
+<ul class="ul list-dash compact" data-line="83">
+<li class="li ul-li list-dash-li compact-li" data-line="83"><span data-line="83"></span>hur många kunde använda det?
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="84"><span data-line="84"></span>hur många har datorer på föreläsningar?
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="85"><span data-line="85"></span>användning utanför schemalagd tid?
+</li></ul>
+<h2 id="sec-diskussion" class="h1" data-line="87" data-heading-depth="1" style="display:block"><span data-line="87"></span><span class="heading-before"><span class="heading-label">6</span>.&#8194;</span><span data-line="87"></span>Diskussion</h2>
+<ul class="ul list-dash compact" data-line="88">
+<li class="li ul-li list-dash-li compact-li" data-line="88"><span data-line="88"></span>fortsatt framtida användning
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="89"><span data-line="89"></span>förbättringar
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="90"><span data-line="90"></span>använda Codela eller t.ex. jsfiddle?
+</li>
+<li class="li ul-li list-dash-li compact-li" data-line="91"><span data-line="91"></span>tillämpbarhet inom andra ämnen än programmering?
+</li></ul>
+<span data-line=""></span></div>
+</body>
+
+</html>
