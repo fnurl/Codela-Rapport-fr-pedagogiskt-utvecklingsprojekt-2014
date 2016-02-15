@@ -10,4 +10,4 @@ Syftet med detta projekt är att försöka hitta ett sätt att låta studenterna
 
 ## Projektdeltagare
 
-Pedagogiska medel för detta projekt söktes av följande personer vid institutionen för datavetenskap: Jody Foo (huvudsökande), Anders Fröberg, Erik Berglund, Camilla Kirkegaard, Jalal Maleki.
+Pedagogiska medel för detta projekt söktes av följande personer vid institutionen för datavetenskap: Jody Foo (huvudsökande), Anders Fröberg, Erik Berglund, Camilla Kirkegaard, Jalal Maleki. Utvecklingen av den tekniska platformen leddes av Anders Fröberg och Jody Foo, och implementerades av Sahand Sajadee.

@@ -336,37 +336,66 @@
 </li></ol>
 
 <p class="p noindent" data-line="54"><span data-line="54"></span>Ett sätt att rama in detta projekt är således att se det som en ansats att tillföra <span data-line="54"></span><em class="em-star1">Blended Learning</em><span data-line="54"></span>  <span data-line="54"></span>\<span data-line="54"></span>cite{sharma<span data-line="54"></span>_<span data-line="54"></span>blended<span data-line="54"></span>_<span data-line="54"></span>2010} till programmeringsundervisning. Ett annat sätt att rama in projektet är att se det som en ansats till att skapa och tillhandahålla en miljö som möjliggör aktivt lärande på en programmeringsföreläsning. Vi ser också att en satsning som denna bidrar till ett aktivt lärande under föreläsningar. Tidigare studier har visat att detta, precis som i andra ämnesområden är något som har en positiv påverkan på studenternas lärande, se t.ex. <span data-line="54"></span>\<span data-line="54"></span>cite{mcconnell<span data-line="54"></span>_<span data-line="54"></span>active<span data-line="54"></span>_<span data-line="54"></span>1996}.
-</p><h2 id="sec-metod--utveckling-av-systemet" class="h1" data-line="56" data-heading-depth="1" style="display:block"><span data-line="56"></span><span class="heading-before"><span class="heading-label">3</span>.&#8194;</span><span data-line="56"></span>Metod: Utveckling av systemet</h2>
-<ul class="ul list-dash compact" data-line="58">
-<li class="li ul-li list-dash-li compact-li" data-line="58"><span data-line="58"></span>kort om hur utvecklingsprocessen såg ut, resurser som använders m.m.
+</p><h2 id="sec-metod--vervganden-och-utveckling-av-systemet----codela" class="h1" data-line="56" data-heading-depth="1" style="display:block"><span data-line="56"></span><span class="heading-before"><span class="heading-label">3</span>.&#8194;</span><span data-line="56"></span>Metod: Överväganden och utveckling av systemet<span data-line="56"></span> <span data-line="56"></span>&#8211;<span data-line="56"></span> Codela</h2>
+<p class="p noindent" data-line="58"><span data-line="58"></span>Tidigare erfarenhet hos projektdeltagarna av att använda olika typer av IKT-inslag på föreläsningar och kurser föranledde kravet på att det tilltänkta systemet skulle kräva så lite förberedelser och administration <span data-line="58"></span><em class="em-star1">vid användning under föreläsning</em><span data-line="58"></span>.
+</p>
+<p class="p indent" data-line="60"><span data-line="60"></span>Även om de flesta studenter har tillgång till en egen bärbar dator, har inte alla, av olika anledningar, installerat alla komponenter i den programmeringsmiljö som behövs för att kunna genomföra samma övningar som i datorlabbsalarna eller PULarna<span data-line="60"></span><sup id="back-fn-pul" ><a href="#fn-pul" title="1.Programutvecklingslaboratorier
+&#8617;" class="footnote-ref localref" ><span class="footnote-label">1</span></a></sup><span data-line="60"></span> som de kallas för på Institutionen för Datavatetenskap. Detta gäller speciellt på introduktionskurser i programmering. Olika kombinationer av operativsystem och andra installerade program på studenternas egna datorer innebär också att <span data-line="60"></span><em class="em-star1">en</em><span data-line="60"></span> uppsättning instruktioner inte räcker för att vägleda noviser att installera och konfigurera en programmeringsmiljö på sin egen dator.
+</p>
+<p class="p indent" data-line="64"><span data-line="64"></span>Tre tekniska lösningsspår med olika för- och nackdelar övervägdes:
+</p>
+<ol class="ol compact" data-line="66">
+<li class="li ol-li compact-li" data-line="66"><span data-line="66"></span>Lokal virtuell miljö: Skapande och distribution av virtuell miljö som körs på studenternas egen dator.
+</li>
+<li class="li ol-li compact-li" data-line="67"><span data-line="67"></span>Fjärranslutning till virtuell miljö: Uppkoppling mot virtuell miljö som körs på en server.
+</li>
+<li class="li ol-li compact-li" data-line="68"><span data-line="68"></span>Webbtjänst: Webbaserad platform som nås via en webbläsare.
+</li></ol>
+<h3 id="sec-lokal-virtuell-milj" class="h2" data-line="71" data-heading-depth="2" style="display:block"><span data-line="71"></span><span class="heading-before"><span class="heading-label">3.1</span>.&#8194;</span><span data-line="71"></span>Lokal virtuell miljö</h3>
+<p class="p noindent" data-line="73"><span data-line="73"></span>En <span data-line="73"></span><em class="em-star1">lokal</em><span data-line="73"></span> virtualiserad programmeringsmiljö innebär att man kör ett program på sin <span data-line="73"></span><em class="em-star1">egen dator</em><span data-line="73"></span> som skapar en <span data-line="73"></span><em class="em-star1">virtuell dator</em><span data-line="73"></span> i den egna datorn. Istället att använda en separat fysisk dator, så skapar man alltså en virtuell dator innuti en fysisk dator. En mall för denna virtuella dator förbereds så att samma virtuella dator kan köras av vem som helst. Som alternativ för detta projekt hade det inneburit att studenterna inte skulle behöva installera eller konfigurera en programmeringsmiljö på sin egen dator, utan att en standardiserad programmeringsmiljö skulle kunna förberedas för att sedan distribueras till studenterna som kör den på en virtuell dator.
+</p>
+<p class="p indent" data-line="75"><span data-line="75"></span>Detta alternativ för med sig en hel del flexibilitet då man i princip har möjlighet att förbereda samma miljö som finns tillgänglig i labbsalarna. En nackdel är att även om det är färre steg att utföra jämfört med att installera och konfigurera en hel programmeringsmiljö på sin dator, så är det fortfarande ett par steg som måste förberedas av studenten innan föreläsning. Om en förändring ska ske i konfigurationen, eller filer distribueras som ska användas under en föreläsning, behöver detta också förberedas innan föreläsningen, både av teknisk personal, av föreläsaren och av studenterna. Mallarna till de virtuella maskinerna kan också vara av en storlek på några gigabyte. Något som inte är ett lika stort problem som för bara några år sedan, men som fortfarande är en faktor som bidrar till ytterligare logistiska förberedelser.
+</p><h3 id="sec-fjrranslutning-till-virtuell-milj" class="h2" data-line="78" data-heading-depth="2" style="display:block"><span data-line="78"></span><span class="heading-before"><span class="heading-label">3.2</span>.&#8194;</span><span data-line="78"></span>Fjärranslutning till virtuell miljö</h3>
+<p class="p noindent" data-line="80"><span data-line="80"></span>Ett alternativ till att köra den virtuella miljön lokalt, dvs på sin egen dator, är att köra de virtuella maskinerna på en server som studenterna når via internet. Samma fördelar som att köra en virtuell dator lokalt finns, men med mindre förberedelse. Denna lösning innebär också att vid uppdateringar av programmeringsmiljön, behöver inte studenterna själva göra något, utan det kan ske utan att de behöver vara aktiva. Nackdelarna med att fjärransluta till en virtuell miljö är att den servern som kör de virtuella datorerna måste vara tillräckligt kraftfull för att hantera det antal virtuella datorer som behövs. För att kunna tillhandahålla virtuella datorer till en klass på 50 studenter, behövs en eller flera servrar som har tillräckligt mycket datorkraft att köra dessa 50 virtuella datorerna.
+</p>
+<p class="p indent" data-line="82"><span data-line="82"></span>Då projektet började fanns det planer på att tillhandahålla virtuella datorer till studenter som läste kurser på Institutionen för Datavetenskap, men detta initiativ var dock inte ännu i drift.
+</p><h3 id="sec-webbtjnst" class="h2" data-line="85" data-heading-depth="2" style="display:block"><span data-line="85"></span><span class="heading-before"><span class="heading-label">3.3</span>.&#8194;</span><span data-line="85"></span>Webbtjänst</h3><h3 id="sec-utvecklingar-som-skett-efter-projektets-start" class="h2" data-line="90" data-heading-depth="2" style="display:block"><span data-line="90"></span><span class="heading-before"><span class="heading-label">3.4</span>.&#8194;</span><span data-line="90"></span>Utvecklingar som skett efter projektets start</h3>
+<ul class="ul list-dash compact" data-line="92">
+<li class="li ul-li list-dash-li compact-li" data-line="92"><span data-line="92"></span>ThinLic
 </li></ul>
-<h2 id="sec-metod--anvndning-av-systemet-i-kurser" class="h1" data-line="60" data-heading-depth="1" style="display:block"><span data-line="60"></span><span class="heading-before"><span class="heading-label">4</span>.&#8194;</span><span data-line="60"></span>Metod: Användning av systemet i kurser</h2>
-<ul class="ul list-dash compact" data-line="62">
-<li class="li ul-li list-dash-li compact-li" data-line="62"><span data-line="62"></span>beskrivning av olika kurser/studentgrupper vi provat det på
+<h2 id="sec-metod--anvndning-av-systemet-i-kurser" class="h1" data-line="94" data-heading-depth="1" style="display:block"><span data-line="94"></span><span class="heading-before"><span class="heading-label">4</span>.&#8194;</span><span data-line="94"></span>Metod: Användning av systemet i kurser</h2>
+<ul class="ul list-dash compact" data-line="96">
+<li class="li ul-li list-dash-li compact-li" data-line="96"><span data-line="96"></span>beskrivning av olika kurser/studentgrupper vi provat det på
 </li>
-<li class="li ul-li list-dash-li compact-li" data-line="63"><span data-line="63"></span>beskrivning av olika sätt som vi använt Codela på
+<li class="li ul-li list-dash-li compact-li" data-line="97"><span data-line="97"></span>beskrivning av olika sätt som vi använt Codela på
 </li></ul>
-<h3 id="sec-anvndning-i-kursen-729g04-programmering-och-diskret-matematik" class="h2" data-line="65" data-heading-depth="2" style="display:block"><span data-line="65"></span><span class="heading-before"><span class="heading-label">4.1</span>.&#8194;</span><span data-line="65"></span>Användning i kursen 729G04 Programmering och diskret matematik</h3>
-<p class="p noindent" data-line="67"><span data-line="67"></span>Kursen 729G04 är en av de första kurserna som studenterna på kandidatprogrammet för Kognitionsvetenskap läser under deras första termin. Det är även den första obligatoriska programmeringskursen av två på programmet. Studenterna är en relativt heterogen grupp med en bakgrund 
-</p><h3 id="sec-anvndning-i-kursen-729g26-interaktionsprogrammering" class="h2" data-line="69" data-heading-depth="2" style="display:block"><span data-line="69"></span><span class="heading-before"><span class="heading-label">4.2</span>.&#8194;</span><span data-line="69"></span>Användning i kursen 729G26 Interaktionsprogrammering</h3><h3 id="sec-anvndning-i-kursen-" class="h2" data-line="71" data-heading-depth="2" style="display:block"><span data-line="71"></span><span class="heading-before"><span class="heading-label">4.3</span>.&#8194;</span><span data-line="71"></span>Användning i kursen <span data-line="71"></span>&#8230;</h3><h2 id="sec-resultat--erfarenheter-och-insikter" class="h1" data-line="73" data-heading-depth="1" style="display:block"><span data-line="73"></span><span class="heading-before"><span class="heading-label">5</span>.&#8194;</span><span data-line="73"></span>Resultat: erfarenheter och insikter</h2>
-<ul class="ul list-dash compact" data-line="75">
-<li class="li ul-li list-dash-li compact-li" data-line="75"><span data-line="75"></span>hur många kunde använda det?
+<h3 id="sec-anvndning-i-kursen-729g04-programmering-och-diskret-matematik" class="h2" data-line="99" data-heading-depth="2" style="display:block"><span data-line="99"></span><span class="heading-before"><span class="heading-label">4.1</span>.&#8194;</span><span data-line="99"></span>Användning i kursen 729G04 Programmering och diskret matematik</h3>
+<p class="p noindent" data-line="101"><span data-line="101"></span>Kursen 729G04 är en av de första kurserna som studenterna på kandidatprogrammet för Kognitionsvetenskap läser under deras första termin. Det är även den första obligatoriska programmeringskursen av två på programmet. Studenterna är en relativt heterogen grupp med en bakgrund 
+</p><h3 id="sec-anvndning-i-kursen-729g26-interaktionsprogrammering" class="h2" data-line="103" data-heading-depth="2" style="display:block"><span data-line="103"></span><span class="heading-before"><span class="heading-label">4.2</span>.&#8194;</span><span data-line="103"></span>Användning i kursen 729G26 Interaktionsprogrammering</h3><h3 id="sec-anvndning-i-kursen-" class="h2" data-line="105" data-heading-depth="2" style="display:block"><span data-line="105"></span><span class="heading-before"><span class="heading-label">4.3</span>.&#8194;</span><span data-line="105"></span>Användning i kursen <span data-line="105"></span>&#8230;</h3><h2 id="sec-resultat--erfarenheter-och-insikter" class="h1" data-line="107" data-heading-depth="1" style="display:block"><span data-line="107"></span><span class="heading-before"><span class="heading-label">5</span>.&#8194;</span><span data-line="107"></span>Resultat: erfarenheter och insikter</h2>
+<ul class="ul list-dash compact" data-line="109">
+<li class="li ul-li list-dash-li compact-li" data-line="109"><span data-line="109"></span>hur många kunde använda det?
 </li>
-<li class="li ul-li list-dash-li compact-li" data-line="76"><span data-line="76"></span>hur många har datorer på föreläsningar?
+<li class="li ul-li list-dash-li compact-li" data-line="110"><span data-line="110"></span>hur många har datorer på föreläsningar?
 </li>
-<li class="li ul-li list-dash-li compact-li" data-line="77"><span data-line="77"></span>användning utanför schemalagd tid?
+<li class="li ul-li list-dash-li compact-li" data-line="111"><span data-line="111"></span>användning utanför schemalagd tid?
 </li></ul>
-<h2 id="sec-diskussion" class="h1" data-line="79" data-heading-depth="1" style="display:block"><span data-line="79"></span><span class="heading-before"><span class="heading-label">6</span>.&#8194;</span><span data-line="79"></span>Diskussion</h2>
-<ul class="ul list-dash compact" data-line="80">
-<li class="li ul-li list-dash-li compact-li" data-line="80"><span data-line="80"></span>fortsatt framtida användning
+<h2 id="sec-diskussion" class="h1" data-line="113" data-heading-depth="1" style="display:block"><span data-line="113"></span><span class="heading-before"><span class="heading-label">6</span>.&#8194;</span><span data-line="113"></span>Diskussion</h2>
+<ul class="ul list-dash compact" data-line="114">
+<li class="li ul-li list-dash-li compact-li" data-line="114"><span data-line="114"></span>fortsatt framtida användning
 </li>
-<li class="li ul-li list-dash-li compact-li" data-line="81"><span data-line="81"></span>förbättringar
+<li class="li ul-li list-dash-li compact-li" data-line="115"><span data-line="115"></span>förbättringar
 </li>
-<li class="li ul-li list-dash-li compact-li" data-line="82"><span data-line="82"></span>använda Codela eller t.ex. jsfiddle?
+<li class="li ul-li list-dash-li compact-li" data-line="116"><span data-line="116"></span>använda Codela eller t.ex. jsfiddle?
 </li>
-<li class="li ul-li list-dash-li compact-li" data-line="83"><span data-line="83"></span>tillämpbarhet inom andra ämnen än programmering?
+<li class="li ul-li list-dash-li compact-li" data-line="117"><span data-line="117"></span>tillämpbarhet inom andra ämnen än programmering?
 </li></ul>
-<span data-line=""></span></div>
+<span data-line=""></span>
+<div class="footnotes madoko">
+<hr >
+
+<div id="fn-pul" class="footnote" data-line="62" style="line-adjust:0">
+<p class="p noindent" data-line="62"><span data-line="62"></span><span class="footnote-before"><sup><span class="footnote-label">1</span>.</sup></span><span data-line="62"></span><strong class="strong-star2">P</strong><span data-line="62"></span>rogram<span data-line="62"></span><strong class="strong-star2">u</strong><span data-line="62"></span>tvecklings<span data-line="62"></span><strong class="strong-star2">l</strong><span data-line="62"></span>aboratorier
+<span data-line="63"></span><span data-line="63"></span><a href="#back-fn-pul" class="footnote-backref localref">&#8617;</a></p></div></div></div>
 </body>
 
 </html>
