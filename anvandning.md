@@ -10,4 +10,4 @@ Kursen 729G04 är en av de första kurserna som studenterna på kandidatprogramm
 ## Användning i kursen 729G26 Interaktionsprogrammering
 
 ## Användning i kursen TDP013
-Kursen TDP013 är en webbprogrammeings kurs där studenterna kommer i kontakt med tekniker och språk så som HTML,CSS, och Javascript. Det är en obligatorisk kurs som läses i årskurs två på Inovativ 
+Kursen TDP013 är en webbprogrammerings kurs där studenterna kommer i kontakt med tekniker och språk så som HTML,CSS, och Javascript. Det är en obligatorisk kurs som läses i årskurs två på Innovativprogrammering-programmet. Studenter har när dom kommer till kursen en bra teknikgrund att stå på, även om de teknikern som används i kursen är nya för studenterna. I kursen användes Codela av både läraren och studenterna. Läraren använder verktyget för att på ett interaktivt vis demonstrera hur de olika teknikerna fungerar,  studenterna kan sen prova på de olika teknikerna i en kontrollerad och förberedd miljö. 
