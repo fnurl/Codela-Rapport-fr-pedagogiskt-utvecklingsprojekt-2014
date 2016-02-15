@@ -1,14 +1,14 @@
 Title           : Studentaktiva programmeringsföreläsningar
 Subtitle        : Rapport från pedagogiskt utvecklingsprojekt 2014.
 Author Columns  : 3
-Author          : Jody Foo, Anders Fröberg, Erik Berglund, Jalal Maleki  
+Author          : Jody Foo, Anders Fröberg, Erik Berglund, Jalal Maleki
                   Camilla Kirkegaard, Sahand Sajadee
 Affiliation     : Linköping University
 Email           : {förnamn.efternamn}@liu.se
 Bibliography    : bibliography/biblio.bib
 Csl Style       : madoko-natural
 Cite Style      : natural
-Document Class  : [11pt]article
+Document Class  : [12pt]article
 Locale          : sv_SE
 Logo            : False
 
