@@ -1,4 +1,4 @@
-# Metod: Överväganden och utveckling av systemet -- Codela
+# Metod: Överväganden och utveckling av systemet - Codela
 
 Tidigare erfarenhet hos projektdeltagarna av att använda olika typer av IKT-inslag på föreläsningar och kurser föranledde kravet på att det tilltänkta systemet skulle kräva så lite förberedelser och administration *vid användning under föreläsning*.
 
@@ -36,3 +36,12 @@ Då projektet började fanns det planer på att tillhandahålla virtuella datore
 Det tredje alternativet som utreddes i början av projektet var att tillhandahålla en specialiserad programmeringsmiljö via webben, dvs som en webbtjänst. Precis som med en fjärranslutning till en virtuell dator, behöver studenten ha tillgång till internet för att använda sig av denna lösning. En webbtjänst behöver också en server som den körs på, men till skillnad från en virtuell dator, använder en webbtjänst i regel mycket mindre resurser av servern.
 
 En webbtjänst innebär dock även en specialisering och begränsning av den funktionalitet som tillhandahålls. Samma frihet i konfiguration och tillgång till olika sorters mjukvara finns inte längre som i de två första alternativen med virtuell dator.
+
+
+## Val av teknisk lösning och kort om utvecklingsprocessen
+
+Det tekniska spår som valdes var att utveckla en webbtjänst. Några av anledningarna var följande:
+
+- Användning behöver inte nödvändigtvis begränsas till datorer, utan användning via surfplatta eller smart telefon blir också möjlig
+- Infrastruktur för att tillhandahålla den här typen av platform fanns redan på plats på Institutionen för Datavetenskap.
+- För de kurser som var tänkta att ingå i detta projekt (se Användning nedan), räckte den flexibilitet som en webbtjänst kan tillhandahålla.
